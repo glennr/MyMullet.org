@@ -10,7 +10,7 @@ before_filter :require_user, :only => [:show, :edit, :update]
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Account registered!"
-      redirect_back_or_default account_url
+      redirect_to dashboard_path
     else
       render :action => :new
     end
