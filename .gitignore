@@ -1,2 +1,6 @@
 nbproject
 .project
+log/*
+tmp/**/*
+doc/api
+doc/app
