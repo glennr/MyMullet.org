@@ -355,21 +355,112 @@ Processing MainController#index (for ::1 at 2009-08-29 22:57:04) [GET]
 Rendering main/index
 Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/]
 
+Processing MainController#index (for 127.0.0.1 at 2009-08-29 23:03:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering main/index
+Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
 
-Processing UsersController#new (for ::1 at 2009-08-29 23:03:41) [GET]
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:03:15) [GET]
   Parameters: {"action"=>"new", "controller"=>"users"}
 Rendering template within layouts/users
 Rendering users/new
-Rendered users/_form (1.1ms)
-Completed in 22ms (View: 12, DB: 0) | 200 OK [http://localhost/users/new]
+Rendered users/_form (2.1ms)
+Completed in 79ms (View: 59, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090829202959)
+Migrating to CreateSessions (20090829205054)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("sessions")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
 
 
-Processing UsersController#create (for ::1 at 2009-08-29 23:03:49) [POST]
-  Parameters: {"commit"=>"Register", "action"=>"create", "authenticity_token"=>"KAHDkglfsGyVHIFK/ODeXBKmB/4l3xoPYsw/6vnCuzo=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"glenn.roberts@siyelo.com"}}
-  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'glenn.roberts@siyelo.com') LIMIT 1[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5dc0174798404161c6136bc8c5cb1107de1049966226fc4afaa83367fd31951fc0eed1a89ab484fca22dfd8861825ae0093a632cfa18f40e422f0451392d39a8') LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ugbCLznZcuWLCgM5yVKh') LIMIT 1[0m
+Processing MainController#index (for 127.0.0.1 at 2009-08-29 23:05:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering main/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:05:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NoMethodError (undefined method `require_no_user' for #<UsersController:0xb711ba68>):
+  haml (2.2.3) [v] rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (53.3ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:13:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NoMethodError (undefined method `require_no_user' for #<UsersController:0xb71d37d0>):
+  haml (2.2.3) [v] rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (51.7ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:13:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NoMethodError (undefined method `require_no_user' for #<UsersController:0xb707cda0>):
+  haml (2.2.3) [v] rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (57.7ms)
+Rendered rescues/_request_and_response (76.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:13:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NoMethodError (undefined method `require_no_user' for #<UsersController:0xb7272718>):
+  haml (2.2.3) [v] rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (77.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-08-29 23:13:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering main/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:13:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NoMethodError (undefined method `require_no_user' for #<UsersController:0xb70bd5bc>):
+  haml (2.2.3) [v] rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (128.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:18:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Rendering template within layouts/users
 Rendering users/new
-Rendered users/_form (0.6ms)
-Completed in 228ms (View: 3, DB: 1) | 200 OK [http://localhost/account]
+Rendered users/_form (2.3ms)
+Completed in 69ms (View: 24, DB: 1) | 200 OK [http://localhost/users/new]

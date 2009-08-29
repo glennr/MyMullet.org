@@ -31,7 +31,7 @@ Rails::Initializer.run do |config|
   config.gem "term-ansicolor", :version => ">=1.0.4", :lib => false
   config.gem "treetop", :version => ">=1.3.0"
   config.gem "diff-lcs", :version => ">=1.1.2", :lib => false
-  config.gem "nokogiri", :version => ">=1.3.3"
+  #config.gem "nokogiri", :version => ">=1.3.3"
   config.gem "builder", :version => ">=2.1.2"
   #cucumber
   config.gem 'rspec', :version => ">=1.2.8", :lib => false
