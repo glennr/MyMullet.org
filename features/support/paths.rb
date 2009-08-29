@@ -10,12 +10,6 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
-    when /the new user page/
-      new_user_path
-
-    when /the new log_in page/
-      new_log_in_path
-
     
     # Add more mappings here.
     # Here is a more fancy example:

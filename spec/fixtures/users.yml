@@ -1,17 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  full_name: MyString
-  user_name: MyString
-  email: MyString
-  password: MyString
-  recaptcha: false
-  newsletter: false
-
-two:
-  full_name: MyString
-  user_name: MyString
-  email: MyString
-  password: MyString
-  recaptcha: false
-  newsletter: false
+# one:
+#   column: value
+#
+# two:
+#   column: value

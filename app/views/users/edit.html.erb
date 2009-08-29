@@ -1,36 +1,9 @@
-<h1>Editing user</h1>
+<h1>Edit My Account</h1>
 
-<% form_for(@user) do |f| %>
+<% form_for @user, :url => account_path do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :full_name %><br />
-    <%= f.text_field :full_name %>
-  </p>
-  <p>
-    <%= f.label :user_name %><br />
-    <%= f.text_field :user_name %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </p>
-  <p>
-    <%= f.label :recaptcha %><br />
-    <%= f.check_box :recaptcha %>
-  </p>
-  <p>
-    <%= f.label :newsletter %><br />
-    <%= f.check_box :newsletter %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+  <%= render :partial => "form", :object => f %>
+  <%= f.submit "Update" %>
 <% end %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<br /><%= link_to "My Profile", account_path %>
