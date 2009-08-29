@@ -221,3 +221,71 @@ Processing UsersController#new (for 127.0.0.1 at 2009-08-29 22:57:10) [GET]
 
 Processing ApplicationController#new (for 127.0.0.1 at 2009-08-29 22:57:10) [GET]
   Parameters: {"action"=>"new", "controller"=>"users"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-08-29 23:01:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:01:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-29 23:01:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-08-29 23:04:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering main/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:04:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-29 23:04:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-08-29 23:08:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:08:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+Rendered users/_form (1.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-08-29 23:22:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering main/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-29 23:22:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+Rendered users/_form (1.0ms)
+Completed in 16ms (View: 14, DB: 1) | 200 OK [http://www.example.com/users/new]
