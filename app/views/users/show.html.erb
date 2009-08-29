@@ -1,0 +1,33 @@
+<p>
+  <b>Full name:</b>
+  <%=h @user.full_name %>
+</p>
+
+<p>
+  <b>User name:</b>
+  <%=h @user.user_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @user.password %>
+</p>
+
+<p>
+  <b>Recaptcha:</b>
+  <%=h @user.recaptcha %>
+</p>
+
+<p>
+  <b>Newsletter:</b>
+  <%=h @user.newsletter %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
