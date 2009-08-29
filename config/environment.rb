@@ -8,13 +8,6 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   
-  
-  # load our vendor/gems
-  config.load_paths += Dir["#{RAILS_ROOT}/vendor/gems/**"].map do |dir| 
-    File.directory?(lib = "#{dir}/lib") ? lib : dir
-  end
-  
-  
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -23,10 +16,31 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  # config.gem "bj"
-  # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
-  # config.gem "sqlite3-ruby", :lib => "sqlite3"
-  # config.gem "aws-s3", :lib => "aws/s3"
+  config.gem "rails", :version=>"=2.3.3"
+  
+  #config.gem "authlogic", :version => "=2.0.11"
+  #config.gem "thoughtbot-factory_girl",
+  #             :lib    => "factory_girl",
+  #             :source => "http://gems.github.com",
+  #             :version => "1.2.1"
+  config.gem "haml", :version => "=2.2.3"
+  #config.gem "mislav-will_paginate"  , :version => "=2.3.8",  :lib => "will_paginate"
+  #config.gem "rack" , :version => "=1.0.0"
+  #config.gem "samsouder-titlecase", :version => "=0.1.0", :lib => "titlecase"
+  #cucumber dependencies
+  config.gem "term-ansicolor", :version => "=1.0.4"
+  config.gem "treetop", :version => "=1.3.0"
+  config.gem "diff-lcs", :version => "=1.1.2"
+  config.gem "nokogiri", :version => "=1.3.3"
+  config.gem "builder", :version => "=2.1.2"
+  #cucumber
+  config.gem 'rspec', :version => '=1.2.8', :lib => false
+  config.gem 'rspec-rails', :version => '=1.2.7.1', :lib => false
+  config.gem "polyglot", :version => "=0.2.8"
+  config.gem "cucumber", :version => "=0.3.98"
+
+
+
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
