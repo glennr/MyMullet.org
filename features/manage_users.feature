@@ -27,3 +27,8 @@ Scenario Outline: Register user
       | glenn | glenn@glenn.com     | pass     | pass         | not see "Dashboard" |
       | glenn | glenn_invalid_email | password | password     | not see "Dashboard" |
       | glenn | glenn@glenn.com     | password | password     | see "Dashboard"     |
+      
+Scenario: Log out user
+  Given I am on the dashboard page
+  And I follow "Sign out"
+  Then I should be on the homepage
