@@ -13,7 +13,7 @@ Scenario: Register a new user
   Given I am on the new user page
   When I fill in "Login" with "glenn_1"
   When I fill in "Email" with "glenn@glenn.com"
-  And I fill in "Password" with "password"
+  And I fill in "Password" with "valid_pass"
   And I fill in "Password Confirmation" with "valid_pass"
   And I press "Register"
   Then I should see "Dashboard"
