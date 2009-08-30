@@ -13,7 +13,13 @@ module NavigationHelpers
       
     when /the new user page/
       new_user_path
-         
+      
+    when /the account page/
+      account_path
+    
+    when /the dashboard page/
+      dashboard_path     
+    
     # Add more mappings here.
     # Here is a more fancy example:
     #

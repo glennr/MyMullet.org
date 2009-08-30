@@ -1,13 +1,11 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'factory_girl'
 
 describe User do
   before(:each) do
-    @valid_attributes = {
-      
-    }
   end
 
-  it "should create a new instance given valid attributes" do
-    User.create!(@valid_attributes)
+  it "should succeed creating a new :valid_user from the Factory" do
+    Factory.create(:user)
   end
 end

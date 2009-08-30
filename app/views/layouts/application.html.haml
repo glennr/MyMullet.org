@@ -1,0 +1,23 @@
+!!! Strict
+%html{ :xmlns=>"http://www.w3.org/1999/xhtml", :'xml:lang'=> "en", :lang=>"en" }  
+  %head
+    %title MyMullet.org
+    = stylesheet_link_tag 'scaffold'
+  %body
+    #header
+      = link_to "Home", root_path
+      #login
+      - if logged_in?
+        = link_to "Dashboard", dashboard_path
+        = link_to 'Sign Out', logout_path
+      - else
+        = link_to "Sign In", login_path
+
+    #content
+      %h1== #{controller.controller_name} : #{controller.action_name}
+      
+      %p= flash[:notice]
+      = yield :layout
+
+    #footer
+      = render :partial => "/shared/creative_commons"

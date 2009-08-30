@@ -7,6 +7,13 @@ Given /^I am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^I am logged in as "([^\"]*)" with password "([^\"]*)"$/ do |username, password|  
+  visit login_url
+  fill_in "Login", :with => username  
+  fill_in "Password", :with => password  
+  click_button "Sign in"
+end
+
 When /^I go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end

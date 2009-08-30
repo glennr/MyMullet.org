@@ -19,14 +19,12 @@ Rails::Initializer.run do |config|
   config.gem "rails", :version=>">=2.3.3"
   
   config.gem "authlogic", :version => ">=2.1.1"
-  #config.gem "thoughtbot-factory_girl",
-  #             :lib    => "factory_girl",
-  #             :source => "http://gems.github.com",
-  #             :version => "1.2.1"
+  config.gem "thoughtbot-factory_girl",
+               :lib    => "factory_girl",
+               :source => "http://gems.github.com",
+               :version => "1.2.2"
   config.gem "haml", :version => ">=2.2.3"
-  #config.gem "mislav-will_paginate"  , :version => ">=2.3.8",  :lib => "will_paginate"
-  #config.gem "rack" , :version => ">=1.0.0"
-  #config.gem "samsouder-titlecase", :version => ">=0.1.0", :lib => "titlecase"
+
   #cucumber dependencies
   config.gem "term-ansicolor", :version => ">=1.0.4", :lib => false
   config.gem "treetop", :version => ">=1.3.0"
