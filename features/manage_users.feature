@@ -28,7 +28,7 @@ Scenario Outline: Register user
       | glenn | glenn_invalid_email | password | password     | not see "Dashboard" |
       | glenn | glenn@glenn.com     | password | password     | see "Dashboard"     |
 
-Scenario: Log in
+Scenario: Log in user
   When I am logged in as "glenn" with password "password"
   Then I should be on the account page
 

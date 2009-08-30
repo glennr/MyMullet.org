@@ -1,7 +1,6 @@
 Factory.define :user , :class => User do |u|
-  u.login "mathieu"
-  u.email "mathieu@gmail.com"
+  u.sequence(:login) { |n| "factory_user_#{n}" }
+  u.sequence(:email) { |n| "factory_user_#{n}@gmail.com" }
   u.password "mathieu"
-  u.password_confirmation "mathieu"
-  u.single_access_token "k3cFzLIQnZ4MHRmJvJzg"
+  u.password_confirmation { |u| u.password }
 end

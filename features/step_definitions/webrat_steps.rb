@@ -8,6 +8,7 @@ Given /^I am on (.+)$/ do |page_name|
 end
 
 Given /^I am logged in as "([^\"]*)" with password "([^\"]*)"$/ do |username, password|  
+  Factory.create(:user, :login => username, :password => password) 
   visit login_url
   fill_in "Login", :with => username  
   fill_in "Password", :with => password  
